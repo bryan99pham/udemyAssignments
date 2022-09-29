@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'basics-assignment-2-start';
+  username = '';
+  isEmpty = true;
+
+  checkEmpty() {
+    if(this.username.length > 0)
+    {
+      this.isEmpty = false;
+    }
+    else
+    {
+      this.isEmpty = true;
+    }
+    return this.isEmpty;
+  }
+
+  onReset() {
+    this.username = '';
+  }
 }
